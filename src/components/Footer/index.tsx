@@ -3,12 +3,19 @@ import image from "../../../public/Icon.png";
 import { DownloadCard } from "@/components/DownloadCard/DownloadCard";
 
 const Footer = () => {
+  const imagen = '/clicon_logo.svg'
   return (
+    
     <footer className={styles.footer}>
       <div className={styles.content}>
         <div className={styles.horizontalFooter}>
           <div className={styles.socialMedia}>
-            <h2>CLICON</h2>
+            <div className={styles.brand_container}>
+              <img src={imagen} alt="" />
+              <h2>CLICON</h2>
+              
+            </div>
+            
             <h4>Customer Support:</h4>
             <h3>(629) 555- 0129</h3>
             <p>4517 Washington Ave.</p>
