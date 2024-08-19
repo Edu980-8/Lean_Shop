@@ -48,8 +48,15 @@ const Product = () => {
             {sortedData.map((product, index) => (
                 <div key={product.id}>
                     {product.discount === 0 ? <></>: <p id="discount" className={styles.discount_container}>{product.discount}% OFF</p>}
-                    <img src={product.image} alt={product.name} />
-                    <p>{renderStars(product.rating)} <>({product.reviews_number})</></p>
+                    <div className={styles.image_container}>
+                        <img src={product.image} alt={product.name} />
+                        <div className={styles.icons}>
+                            <i className={styles.icon}>❤️</i>
+                            <i className={styles.icon}>🛒</i>
+                            <i className={styles.icon}>👁️</i>
+                        </div>
+                    </div>
+                                            <p>{renderStars(product.rating)} <>({product.reviews_number})</></p>
                     <h2>{product.name}</h2>
                     <p>${product.price}</p>
                     {index === 0 && 
